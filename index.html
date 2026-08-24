@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namawa Clement Michael — Portfolio</title>
+<meta name="description" content="Communications, policy research and organisational leadership — Kampala, Uganda, open to remote work.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --paper: #f5f2ea;
+    --paper-raised: #efeadb;
+    --ink: #201f18;
+    --ink-soft: #55523f;
+    --ink-faint: #8b866d;
+    --accent: #a9701f;
+    --accent-deep: #7a4f14;
+    --accent-soft: #eadfc4;
+    --line: #ddd4b9;
+    --tag-bg: #ece4cd;
+    --tag-ink: #6d5a2c;
+    --shadow: 0 1px 0 rgba(32, 31, 24, 0.06);
+    --focus: #2f6f5e;
+
+    /* multi hue accent palette */
+    --c1: #b1502e; /* terracotta */
+    --c2: #1f7a68; /* teal */
+    --c3: #4a4e9c; /* indigo */
+    --c4: #a9701f; /* gold */
+    --c5: #a13f5c; /* rose */
+    --c6: #6f7d2f; /* olive */
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1b1a15;
+      --paper-raised: #24221b;
+      --ink: #efe9d8;
+      --ink-soft: #bcb298;
+      --ink-faint: #8a8268;
+      --accent: #e2a54c;
+      --accent-deep: #f2c07a;
+      --accent-soft: #3a3020;
+      --line: #3a3628;
+      --tag-bg: #2c2818;
+      --tag-ink: #d8b878;
+      --focus: #7fc4ae;
+
+      --c1: #e2896a;
+      --c2: #5fd6b8;
+      --c3: #9aa0f0;
+      --c4: #e2a54c;
+      --c5: #e992b0;
+      --c6: #c3d47a;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #1b1a15;
+    --paper-raised: #24221b;
+    --ink: #efe9d8;
+    --ink-soft: #bcb298;
+    --ink-faint: #8a8268;
+    --accent: #e2a54c;
+    --accent-deep: #f2c07a;
+    --accent-soft: #3a3020;
+    --line: #3a3628;
+    --tag-bg: #2c2818;
+    --tag-ink: #d8b878;
+    --focus: #7fc4ae;
+
+    --c1: #e2896a;
+    --c2: #5fd6b8;
+    --c3: #9aa0f0;
+    --c4: #e2a54c;
+    --c5: #e992b0;
+    --c6: #c3d47a;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--c2); }
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  .mono {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    letter-spacing: 0.02em;
+  }
+
+  .wrap {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: clamp(2rem, 6vw, 4.5rem) clamp(1.25rem, 5vw, 1.5rem) 5rem;
+  }
+
+  /* ---------- Masthead ---------- */
+  header.masthead {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .doc-id {
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+  }
+
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(2.1rem, 6vw, 3rem);
+    line-height: 1.04;
+    margin: 0 0 0.5rem;
+    text-wrap: balance;
+    background: linear-gradient(100deg, var(--c1), var(--c3) 60%, var(--c2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .role {
+    font-family: "Fraunces", Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--c1);
+    margin: 0 0 1rem;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+  }
+  .meta-row span { display: inline-flex; align-items: baseline; gap: 0.4em; }
+  .meta-row .k { color: var(--ink-faint); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* ---------- Section scaffolding ---------- */
+  section { margin-bottom: 3rem; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1.3rem;
+  }
+  .section-head .tag {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  .section-head h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+    flex: none;
+  }
+  .section-head .rule { flex: 1; height: 2px; background: var(--line); border-radius: 2px; }
+
+  section:nth-of-type(1) .section-head .tag { color: var(--c1); }
+  section:nth-of-type(1) .section-head .rule { background: linear-gradient(to right, var(--c1), transparent); }
+  section:nth-of-type(2) .section-head .tag { color: var(--c2); }
+  section:nth-of-type(2) .section-head .rule { background: linear-gradient(to right, var(--c2), transparent); }
+  section:nth-of-type(3) .section-head .tag { color: var(--c3); }
+  section:nth-of-type(3) .section-head .rule { background: linear-gradient(to right, var(--c3), transparent); }
+  section:nth-of-type(4) .section-head .tag { color: var(--c4); }
+  section:nth-of-type(4) .section-head .rule { background: linear-gradient(to right, var(--c4), transparent); }
+  section:nth-of-type(5) .section-head .tag { color: var(--c5); }
+  section:nth-of-type(5) .section-head .rule { background: linear-gradient(to right, var(--c5), transparent); }
+  section:nth-of-type(6) .section-head .tag { color: var(--c6); }
+  section:nth-of-type(6) .section-head .rule { background: linear-gradient(to right, var(--c6), transparent); }
+
+  .lede {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 40rem;
+  }
+
+  /* ---------- Strengths ---------- */
+  .strengths {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .strength {
+    background: var(--paper);
+    padding: 1.2rem 1.2rem 1.1rem;
+    border-top: 3px solid transparent;
+  }
+  .strength .n {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+  }
+  .strength p { margin: 0; color: var(--ink-soft); font-size: 0.94rem; }
+  .strength strong { color: var(--ink); font-weight: 600; }
+
+  .strength.c1 { border-top-color: var(--c1); }
+  .strength.c1 .n { color: var(--c1); }
+  .strength.c2 { border-top-color: var(--c2); }
+  .strength.c2 .n { color: var(--c2); }
+  .strength.c3 { border-top-color: var(--c3); }
+  .strength.c3 .n { color: var(--c3); }
+  .strength.c4 { border-top-color: var(--c4); }
+  .strength.c4 .n { color: var(--c4); }
+  .strength.c5 { border-top-color: var(--c5); }
+  .strength.c5 .n { color: var(--c5); }
+
+  .strengths .strength:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+  @media (max-width: 34rem) {
+    .strengths { grid-template-columns: 1fr; }
+    .strengths .strength:last-child:nth-child(odd) { grid-column: auto; }
+  }
+
+  /* ---------- Timeline ---------- */
+  .entry {
+    display: grid;
+    grid-template-columns: 7.2rem 1fr;
+    gap: 1.2rem;
+    padding: 1.35rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .entry:last-child { padding-bottom: 0; }
+  .entry .when {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    padding-top: 0.2rem;
+  }
+  .entry .when .cur {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.68rem;
+    color: var(--c1);
+    background: color-mix(in srgb, var(--c1) 20%, var(--paper-raised));
+    padding: 0.15rem 0.4rem;
+    border-radius: 2px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+  .entry h3 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.12rem;
+    margin: 0 0 0.15rem;
+  }
+  .entry h3::before {
+    content: "";
+    display: inline-block;
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    vertical-align: middle;
+  }
+  .entry.c1 h3::before { background: var(--c1); }
+  .entry.c2 h3::before { background: var(--c2); }
+  .entry.c3 h3::before { background: var(--c3); }
+  .entry.c4 h3::before { background: var(--c4); }
+  .entry.c5 h3::before { background: var(--c5); }
+  .entry.c6 h3::before { background: var(--c6); }
+  .entry .org {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.6rem;
+  }
+  .entry ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--ink-soft);
+    font-size: 0.94rem;
+  }
+  .entry li { margin-bottom: 0.35rem; }
+  .entry li:last-child { margin-bottom: 0; }
+
+  @media (max-width: 30rem) {
+    .entry { grid-template-columns: 1fr; gap: 0.4rem; }
+  }
+
+  /* ---------- Education ---------- */
+  .cred {
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+    align-items: baseline;
+  }
+  .cred h3 { font-family: "Fraunces", serif; font-size: 1.05rem; margin: 0; font-weight: 600; }
+  .cred.c1 h3 { color: var(--c1); }
+  .cred.c2 h3 { color: var(--c2); }
+  .cred.c3 h3 { color: var(--c3); }
+  .cred.c4 h3 { color: var(--c4); }
+  .cred.c5 h3 { color: var(--c5); }
+  .cred.c6 h3 { color: var(--c6); }
+  .cred .inst { font-size: 0.88rem; color: var(--ink-soft); grid-column: 1; }
+  .cred .when { font-family: "IBM Plex Mono", monospace; font-size: 0.76rem; color: var(--ink-faint); text-align: right; }
+  .cred .detail { grid-column: 1 / -1; font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.15rem; }
+
+  /* ---------- Tags / skills ---------- */
+  .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tags span {
+    font-size: 0.82rem;
+    background: var(--tag-bg);
+    color: var(--tag-ink);
+    padding: 0.3rem 0.65rem;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+  .tags span.c1 { background: color-mix(in srgb, var(--c1) 20%, var(--tag-bg)); color: var(--c1); }
+  .tags span.c2 { background: color-mix(in srgb, var(--c2) 20%, var(--tag-bg)); color: var(--c2); }
+  .tags span.c3 { background: color-mix(in srgb, var(--c3) 20%, var(--tag-bg)); color: var(--c3); }
+  .tags span.c4 { background: color-mix(in srgb, var(--c4) 20%, var(--tag-bg)); color: var(--c4); }
+  .tags span.c5 { background: color-mix(in srgb, var(--c5) 20%, var(--tag-bg)); color: var(--c5); }
+  .tags span.c6 { background: color-mix(in srgb, var(--c6) 20%, var(--tag-bg)); color: var(--c6); }
+
+  .lang-row { display: flex; flex-wrap: wrap; gap: 1.6rem; }
+  .lang-row div { font-size: 0.94rem; }
+  .lang-row .lbl { display: block; font-family: "IBM Plex Mono", monospace; font-size: 0.68rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.2rem; }
+
+  /* ---------- Honest note ---------- */
+  .note {
+    border-left: 3px solid var(--c6);
+    padding: 0.2rem 0 0.2rem 1.1rem;
+    color: var(--ink-soft);
+    font-size: 0.94rem;
+    font-style: italic;
+  }
+
+  /* ---------- Footer / contact ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding-top: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.2rem;
+    align-items: flex-end;
+  }
+  .contact-list { display: flex; flex-direction: column; gap: 0.35rem; }
+  .contact-list a { color: var(--ink); text-decoration: none; font-size: 0.95rem; }
+  .contact-list a:hover { color: var(--c1); }
+  .contact-list .lbl { color: var(--ink-faint); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; margin-right: 0.5em; font-family: "IBM Plex Mono", monospace; }
+  footer .stamp {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.7rem;
+    color: var(--ink-faint);
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    section, header.masthead { animation: rise 0.5s ease-out both; }
+    section:nth-of-type(2) { animation-delay: 0.05s; }
+    section:nth-of-type(3) { animation-delay: 0.1s; }
+    section:nth-of-type(4) { animation-delay: 0.15s; }
+    section:nth-of-type(5) { animation-delay: 0.2s; }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="doc-id mono">
+      <span>Professional Dossier</span>
+      <span>Kampala, Uganda · Updated Aug 2026</span>
+    </div>
+    <h1>Namawa Clement Michael</h1>
+    <p class="role">Communications, policy research, administration and organisational leadership</p>
+    <div class="meta-row">
+      <span><span class="k mono">Based</span> Kampala, Uganda</span>
+      <span><span class="k mono">Open to</span> remote work with international organisations</span>
+      <span><span class="k mono">Languages</span> English, Swahili, Luo, Luganda</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="about-h">
+    <div class="section-head">
+      <span class="tag mono">01</span>
+      <h2 id="about-h">Profile</h2>
+      <div class="rule"></div>
+    </div>
+    <p class="lede">
+      Five years leading communications for a faith based international organisation, with an earlier
+      grounding in policy research at a university policy centre and inside the Parliament of Uganda.
+      Strongest where communications, research and stakeholder coordination meet: building the message,
+      finding the evidence behind it, and keeping partners who report through different structures
+      moving in the same direction.
+    </p>
+  </section>
+
+  <section aria-labelledby="strengths-h">
+    <div class="section-head">
+      <span class="tag mono">02</span>
+      <h2 id="strengths-h">Where the record is strongest</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="strengths">
+      <div class="strength c1">
+        <span class="n mono">A</span>
+        <p><strong>Leadership, examined.</strong> Four graded semesters of the Honours College Leadership
+        Programme at Uganda Christian University, top marks in Mentorship every semester.</p>
+      </div>
+      <div class="strength c2">
+        <span class="n mono">B</span>
+        <p><strong>Communications at scale.</strong> Five years directing communications for CFFJ, building
+        media relations, brand voice and crisis response inside a distributed, internationally reporting
+        structure.</p>
+      </div>
+      <div class="strength c3">
+        <span class="n mono">C</span>
+        <p><strong>Research to policy.</strong> Two and a half years turning research into policy briefs and
+        public programming at the Africa Policy Centre and the Parliament of Uganda.</p>
+      </div>
+      <div class="strength c4">
+        <span class="n mono">D</span>
+        <p><strong>Academic foundation.</strong> First Class Honours in Social Work and Social Administration,
+        general GPA 4.40 of 4.5, with coursework in organisational theory, HR management and counselling.</p>
+      </div>
+      <div class="strength c5">
+        <span class="n mono">E</span>
+        <p><strong>Administration and coordination.</strong> Direct experience with scheduling, correspondence,
+        minute taking and document management at the Africa Policy Centre and the Parliament of Uganda, plus five
+        years of day to day office coordination as a communications director.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="exp-h">
+    <div class="section-head">
+      <span class="tag mono">03</span>
+      <h2 id="exp-h">Experience</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="entry c5">
+      <div class="when">2021<br>&mdash; date<span class="cur mono">CURRENT</span></div>
+      <div>
+        <h3>Director of Communications</h3>
+        <div class="org">Center of Faith, Family and Justice · Kampala</div>
+        <ul>
+          <li>Led development and execution of the organisation's communication strategy, growing media
+          coverage and social media engagement.</li>
+          <li>Led and developed a communications team for five years, including quality control across all
+          published material.</li>
+          <li>Coordinated with senior national and international leaders and public figures for webinars
+          and policy dialogues, and led crisis communication efforts.</li>
+          <li>Worked across a distributed structure, coordinating regional partners while reporting to
+          international headquarters without formal authority over partner teams.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry c1">
+      <div class="when">2019<br>&mdash; 2021</div>
+      <div>
+        <h3>Research Associate</h3>
+        <div class="org">Africa Policy Centre, Uganda Christian University · Mukono</div>
+        <ul>
+          <li>Planned and ran weekly Policy Lab sessions and produced policy briefs, reports and published
+          research on education.</li>
+          <li>Organised the national symposium <em>Target Africa: Ideological Neo colonialism in the 21st
+          Century</em> and a public lecture on raising children in the 21st century.</li>
+          <li>Designed the organisation's website and managed its social media accounts.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry c2">
+      <div class="when">2018</div>
+      <div>
+        <h3>Research Intern</h3>
+        <div class="org">Department of Research Services, Parliament of Uganda · Kampala</div>
+        <ul>
+          <li>Formulated policy briefs and carried out Bill analysis for members of Parliament.</li>
+          <li>Profiled every constituency in Uganda and summarised the presidential budget speech.</li>
+          <li>Researched postharvest silo infrastructure and pupil absenteeism for national policy briefs.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry c6">
+      <div class="when">2015<br>&mdash; 2016</div>
+      <div>
+        <h3>Internships and student leadership</h3>
+        <div class="org">Reproductive Health Uganda · Tororo Child Development Center · UCU Guild Parliament</div>
+        <ul>
+          <li>Delivered weekly HIV and sexual health sensitisation to roughly 200 youth across Tororo, and
+          trained six staff in core computer applications.</li>
+          <li>Ran roughly 30 household welfare visits a week and trained mothers in self sustainability
+          skills as part of a six person team.</li>
+          <li>Represented over 800 students as Social Work Member of Parliament, UCU Guild Parliament, and
+          served as Vice Chairperson of the Welfare Committee.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="edu-h">
+    <div class="section-head">
+      <span class="tag mono">04</span>
+      <h2 id="edu-h">Education and credentials</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="cred c3">
+      <h3>Master of Research and Public Policy</h3>
+      <div class="when mono">2017 &mdash; in progress</div>
+      <div class="inst">Uganda Christian University</div>
+    </div>
+
+    <div class="cred c4">
+      <h3>Bachelor of Social Work and Social Administration</h3>
+      <div class="when mono">2014 &mdash; 2017</div>
+      <div class="inst">Uganda Christian University</div>
+      <div class="detail">First Class Honours. General GPA 4.40 of 4.5.</div>
+    </div>
+
+    <div class="cred c5">
+      <h3>Honours College Leadership Programme</h3>
+      <div class="when mono">2017</div>
+      <div class="inst">Uganda Christian University</div>
+      <div class="detail">Four graded semesters. Top marks in Mentorship every semester, plus Leadership
+      Interventions and Leadership Strategy and Change.</div>
+    </div>
+
+    <div class="cred c6">
+      <h3>Uganda Advanced Certificate of Education</h3>
+      <div class="when mono">2012 &mdash; 2013</div>
+      <div class="inst">Rock High School, Tororo</div>
+    </div>
+
+    <div class="cred c1">
+      <h3>Uganda Certificate of Education</h3>
+      <div class="when mono">2008 &mdash; 2011</div>
+      <div class="inst">Bukedi College, Kachong'a</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="skills-h">
+    <div class="section-head">
+      <span class="tag mono">05</span>
+      <h2 id="skills-h">Skills</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tags">
+      <span class="c1">Communications strategy</span>
+      <span class="c2">Media relations</span>
+      <span class="c3">Crisis communications</span>
+      <span class="c4">Policy research and analysis</span>
+      <span class="c5">Workshop and webinar facilitation</span>
+      <span class="c6">Stakeholder coordination</span>
+      <span class="c1">Report and policy brief writing</span>
+      <span class="c2">Team leadership</span>
+      <span class="c3">Budget support</span>
+      <span class="c4">Data collection and analysis</span>
+      <span class="c5">Website and social media management</span>
+      <span class="c6">MS Office</span>
+      <span class="c1">Office administration and scheduling</span>
+      <span class="c2">Correspondence and minute taking</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="note-h">
+    <div class="section-head">
+      <span class="tag mono">06</span>
+      <h2 id="note-h">Stated plainly</h2>
+      <div class="rule"></div>
+    </div>
+    <p class="note">
+      No formal executive coaching track record, no organisation wide diagnosis work at large enterprise
+      scale, and no management consulting background. What is here is genuine: five years of communications
+      leadership, a research grounding in public policy, and a leadership education with the grades to
+      show for it.
+    </p>
+  </section>
+
+  <footer>
+    <div class="contact-list">
+      <a href="mailto:preciousclement256@gmail.com"><span class="lbl">Email</span>preciousclement256@gmail.com</a>
+      <a href="tel:+256787061826"><span class="lbl">Phone</span>+256 787 061 826</a>
+      <a href="https://www.linkedin.com/in/michael-clement-namawa-5ba134119/" target="_blank" rel="noopener noreferrer"><span class="lbl">LinkedIn</span>michael-clement-namawa</a>
+      <span><span class="lbl">Referees</span>Available on request</span>
+    </div>
+    <div class="stamp">
+      Compiled from verified certificates<br>and employment record · Aug 2026
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
