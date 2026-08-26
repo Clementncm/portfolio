@@ -375,6 +375,36 @@
     margin: 0;
     line-height: 1.5;
   }
+  .media-log {
+    margin-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .media-item {
+    display: grid;
+    grid-template-columns: 6.2rem 1fr;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .media-item:last-child { padding-bottom: 0; }
+  .media-date {
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    padding-top: 0.15rem;
+  }
+  .media-desc {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .media-desc strong { color: var(--ink); font-weight: 600; }
+
+  @media (max-width: 30rem) {
+    .media-item { grid-template-columns: 1fr; gap: 0.3rem; }
+  }
+
   .media-links {
     display: flex;
     flex-wrap: wrap;
@@ -585,6 +615,22 @@
       <p class="quote-text">"I stand with Period Talk Uganda this Menstrual Hygiene Day to raise awareness, break stigma, and promote dignity for all who menstruate. Together, we can create a #PeriodFriendlyWorld where menstrual health is a priority and every girl and woman manages her period with confidence and respect. Let's empower, educate, and support each other for a healthier, more equal future. Happy Menstrual Hygiene Day."</p>
       <p class="quote-attrib">Michael Clement Namawa, Director of Communications, Center of Faith, Family and Justice<br>Public campaign statement for Menstrual Hygiene Day, in partnership with Period Talk Uganda</p>
     </div>
+
+    <div class="media-log">
+      <div class="media-item">
+        <span class="media-date mono">May 2023</span>
+        <p class="media-desc"><strong>Research publication, distributed and communicated publicly:</strong> "A Plan to Help Families in Uganda Support Themselves by Removing Barriers that Hold Them Back," examining the barriers to family self reliance in Uganda, shared to policy, development and media contacts including New Vision and the Church of Uganda.</p>
+      </div>
+      <div class="media-item">
+        <span class="media-date mono">Sep 2023</span>
+        <p class="media-desc"><strong>Organised and communicated a public round table:</strong> "Barriers to Family Wellbeing," Silver Springs Hotel, Bugolobi, Kampala, convening church, government and community stakeholders around the same research theme.</p>
+      </div>
+      <div class="media-item">
+        <span class="media-date mono">Jan 2023</span>
+        <p class="media-desc"><strong>Direct stakeholder engagement:</strong> represented CFFJ's communications function in talks with the Church of Uganda's Directorate of Household and Community Transformation on targeted research and development for local community self reliance.</p>
+      </div>
+    </div>
+
     <div class="media-links">
       <a href="https://x.com/cffj_ug" target="_blank" rel="noopener noreferrer">CFFJ's public communications &#8599;</a>
     </div>
