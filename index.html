@@ -195,6 +195,8 @@
   section:nth-of-type(5) .section-head .rule { background: linear-gradient(to right, var(--c5), transparent); }
   section:nth-of-type(6) .section-head .tag { color: var(--c6); }
   section:nth-of-type(6) .section-head .rule { background: linear-gradient(to right, var(--c6), transparent); }
+  section:nth-of-type(7) .section-head .tag { color: var(--c1); }
+  section:nth-of-type(7) .section-head .rule { background: linear-gradient(to right, var(--c1), transparent); }
 
   .lede {
     font-size: 1.05rem;
@@ -351,6 +353,42 @@
   .lang-row div { font-size: 0.94rem; }
   .lang-row .lbl { display: block; font-family: "IBM Plex Mono", monospace; font-size: 0.68rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.2rem; }
 
+  /* ---------- Public communications quote card ---------- */
+  .quote-card {
+    background: var(--paper-raised);
+    border-left: 3px solid var(--c4);
+    border-radius: 3px;
+    padding: 1.3rem 1.4rem;
+    margin-top: 0.5rem;
+  }
+  .quote-text {
+    font-family: "Fraunces", Georgia, serif;
+    font-style: italic;
+    font-size: 1.02rem;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0 0 0.9rem;
+  }
+  .quote-attrib {
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .media-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.4rem;
+    margin-top: 1rem;
+  }
+  .media-links a {
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--c2);
+  }
+  .media-links a:hover { color: var(--c1); }
+
   /* ---------- Honest note ---------- */
   .note {
     border-left: 3px solid var(--c6);
@@ -388,6 +426,8 @@
     section:nth-of-type(3) { animation-delay: 0.1s; }
     section:nth-of-type(4) { animation-delay: 0.15s; }
     section:nth-of-type(5) { animation-delay: 0.2s; }
+    section:nth-of-type(6) { animation-delay: 0.25s; }
+    section:nth-of-type(7) { animation-delay: 0.3s; }
   }
   @keyframes rise {
     from { opacity: 0; transform: translateY(6px); }
@@ -534,9 +574,25 @@
     </div>
   </section>
 
-  <section aria-labelledby="edu-h">
+  <section aria-labelledby="media-h">
     <div class="section-head">
       <span class="tag mono">04</span>
+      <h2 id="media-h">Public communications work</h2>
+      <div class="rule"></div>
+    </div>
+    <p class="lede">A verifiable sample of his public voice, drawn directly from his own posts and CFFJ's public communications channel.</p>
+    <div class="quote-card">
+      <p class="quote-text">"I stand with Period Talk Uganda this Menstrual Hygiene Day to raise awareness, break stigma, and promote dignity for all who menstruate. Together, we can create a #PeriodFriendlyWorld where menstrual health is a priority and every girl and woman manages her period with confidence and respect. Let's empower, educate, and support each other for a healthier, more equal future. Happy Menstrual Hygiene Day."</p>
+      <p class="quote-attrib">Michael Clement Namawa, Director of Communications, Center of Faith, Family and Justice<br>Public campaign statement for Menstrual Hygiene Day, in partnership with Period Talk Uganda</p>
+    </div>
+    <div class="media-links">
+      <a href="https://x.com/cffj_ug" target="_blank" rel="noopener noreferrer">CFFJ's public communications &#8599;</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="edu-h">
+    <div class="section-head">
+      <span class="tag mono">05</span>
       <h2 id="edu-h">Education and credentials</h2>
       <div class="rule"></div>
     </div>
@@ -577,7 +633,7 @@
 
   <section aria-labelledby="skills-h">
     <div class="section-head">
-      <span class="tag mono">05</span>
+      <span class="tag mono">06</span>
       <h2 id="skills-h">Skills</h2>
       <div class="rule"></div>
     </div>
@@ -601,15 +657,18 @@
 
   <section aria-labelledby="note-h">
     <div class="section-head">
-      <span class="tag mono">06</span>
-      <h2 id="note-h">Stated plainly</h2>
+      <span class="tag mono">07</span>
+      <h2 id="note-h">Where this is headed</h2>
       <div class="rule"></div>
     </div>
     <p class="note">
-      No formal executive coaching track record, no organisation wide diagnosis work at large enterprise
-      scale, and no management consulting background. What is here is genuine: five years of communications
-      leadership, a research grounding in public policy, and a leadership education with the grades to
-      show for it.
+      Five years of communications leadership sit alongside a genuine research foundation: two and a half
+      years producing policy briefs and evidence based research at the Africa Policy Centre and the
+      Parliament of Uganda, and hands on administrative and coordination experience built across those same
+      roles. A Master of Research and Public Policy in progress is deepening that grounding into fuller
+      policy analysis. That is a solid foundation, not a finished one: executive coaching, organisation wide
+      diagnosis at enterprise scale, and formal management consulting are not part of the record yet, and
+      that is exactly the direction this trajectory is headed next.
     </p>
   </section>
 
